@@ -1,0 +1,178 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: opacity 250ms var(--time-animation),
+    visibility 250ms var(--time-animation);
+}
+.backdrop.is-hidden .modal {
+    transform: rotate(200deg);
+}
+.modal {
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 609px;
+    @media screen and (min-width:1200px) {
+        width: 528px;
+        height: 581px;
+    }
+    background-color: var(--background-origin);
+    border-radius: 4px;
+    transition: transform 250ms;
+    transform: translate(-50%, -50%) rotate(0);
+    opacity: 1;
+}
+.modal-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--background-origin);
+    border-radius: 50%;
+    @extend %text-center;
+    transition: fill 250ms var(--time-animation);
+}
+.modal-close-btn:focus> .modal-close-icon,
+.modal-close-btn:hover> .modal-close-icon {
+    fill: var(--secondary-text-color);
+}
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+.modal-title {
+    margin-bottom: 12px;
+    @include font (20px, 1.5, 700, 0.03em);
+    @media screen and (min-width:1200px) {
+        line-height: 1.15;
+    }
+    text-align: center;
+    color: var(--primary-text-color);
+}
+.input-user-lable { 
+    padding: 0;
+    @include font (12px, 1.16, null, 0.01em);
+    @media screen and (min-width:1200px) {
+        line-height: 1.14;
+    }
+    color: rgba(117, 117, 117, 1);
+}
+.modal-input {
+    padding: 0;
+    padding-left: 42px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 250ms var(--time-animation),
+    fill 250ms var(--time-animation);
+    &:focus,
+    &:hover {
+    border-color: var(--secondary-text-color);
+    }
+}
+.input-user {
+    margin-bottom: 10px;
+}
+.input-user-icon {
+    position: relative;
+}
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: border-color 250ms var(--time-animation);
+    .modal-input:focus +&,
+    .modal-input:hover +& {
+    fill: var(--secondary-text-color);
+    }
+}
+.modal-coment {
+    margin-top: 0;
+    margin-bottom: 20px;
+    height: 138px;
+}
+.modal-text {
+    margin-top: 4px;
+    padding: 12px 16px;
+    width: 100%;
+    min-height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    @include font (12px, 1.16, null, 0.01em);
+    resize: none;
+    &:focus,
+    &:hover {
+    border-color: var(--secondary-text-color);
+    }
+}
+.checkbox {
+   position: relative;
+}
+.policy {
+    margin-bottom: 30px; 
+}
+.checkbox-link {
+    margin-left: 4px;
+    @include font (12px, 1.17, null, 0.03em);
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+    text-decoration-line: underline;
+    color: var(--secondary-text-color);
+}
+.checkbox-lable {
+    display: flex;
+    align-items: center;
+    @include font (12px, 1.17, null, 0.03em);
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+    color: #757575;
+    &::before {
+        content: ' ';
+        width: 16px;
+        height: 15px;
+        border: 2px solid rgba(33, 33, 33, 1);
+        border-radius: 2px;
+        margin-right: 8px;
+        transition: border-color 250ms var(--time-animation);
+        .checkbox-input:checked + & {
+            background-color: var(--secondary-text-color);
+            border: none;
+            background-image: url(../images/check.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .checkbox-input:focus + & {
+            border-color: var(--secondary-text-color);
+        }
+    }
+    
+}
+.modal-send-btn {
+    padding: 10px 55px;
+    margin: 0 auto;
+    @extend %text-center;
+    font-family: inherit;
+    @include font (16px, 1.88, 700, 0.06em);
+    background-color: var(--secondary-text-color);
+    color: var(--background-origin);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+}

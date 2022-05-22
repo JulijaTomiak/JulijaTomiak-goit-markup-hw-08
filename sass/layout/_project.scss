@@ -1,0 +1,32 @@
+.projects {
+    padding-bottom: 94px;  
+    @media screen and (min-width: 0px) and (max-width: 1199px) {
+        display: none;
+ }
+    
+}
+.project-list {
+    display: flex;
+    justify-content: space-between;
+}
+.project-title {
+    @extend %style-title;
+}
+.project-top {
+    position: relative;
+}
+.project-top-text {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    position: absolute;
+    bottom: 0;
+    @include font (14px, 1.14, 700, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--background-origin);
+    background-color: rgba(47, 48, 58, 0.8);
+    height: 70px;
+    min-width: 370px;
+}
+/* .project-item:not(:last-child) {
+    margin-right: 30px; } */
