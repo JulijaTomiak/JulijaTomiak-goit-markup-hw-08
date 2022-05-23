@@ -19,6 +19,12 @@
         flex-wrap:nowrap;
     }
 }
+.feature-item:not(:last-child) {
+    margin-bottom: 30px;
+    @media screen and (min-width:768px) {
+        margin-bottom: 0; 
+     }
+}
 .feature-item {
     max-width: 480px;
     @media screen and (min-width:768px) {
@@ -32,11 +38,12 @@
         width: 270px;
     }
 }
-    .title {
-        @include font (14px, 1.14, null, 0.03em);
-        text-align: center;
-        @media screen and (min-width:1200px) {
-        text-align: start;
+.title {
+    margin-bottom: 10px;
+    @include font (14px, 1.14, null, 0.03em);
+    text-align: center;
+    @media screen and (min-width:1200px) {
+    text-align: start;
         }
     }
 /*Заголовки h2*/
@@ -50,10 +57,4 @@
     border-radius: 4px;
     @extend %text-center;
     margin-bottom: 30px;
-}
-.feature-text {
-    margin-bottom: 30px;
-    @media screen and (min-width:768px) {
-        margin-bottom: 0; 
-     }
 }

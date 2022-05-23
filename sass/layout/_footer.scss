@@ -14,21 +14,21 @@ footer .container {
     }
 }
 .footer-tablet {
+    margin-bottom: 60px;
+    align-items: baseline;
     @media screen and (min-width:768px) {
     display: flex;
-    padding-left: 61px;
-    padding-right: 74px;
+    justify-content: space-around;
+    margin-bottom: 0;
     }
     @media screen and (min-width:1200px) {
         padding: 0;
         }
 }
 .footer-left {
-    @media screen and (min-width:768px) {
-     margin-right: 165px;
-    }
+    margin-bottom: 60px;
     @media screen and (min-width:1200px) {
-    margin: 0;
+        margin-bottom: 0;
         }
 }
 .footer-logo {
@@ -37,7 +37,6 @@ footer .container {
 }
 .footer-contact {
     margin-top: 20px;
-    margin-bottom: 60px;
     text-align: center;
     color: var(--background-origin);
     @include font (14px, 1.71, null, 0.03em);
@@ -64,7 +63,6 @@ footer .container {
     }
 }
 .footer-social {
-    margin-bottom: 60px;
     @media screen and (min-width:1200px) {
         margin-left: 70px;
          }
