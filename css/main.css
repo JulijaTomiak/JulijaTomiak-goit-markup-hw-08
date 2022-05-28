@@ -1091,6 +1091,14 @@ footer .container {
   }
 }
 
+.footer-social {
+  margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-social {
+    margin-top: 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-social {
     margin-left: 70px;
@@ -1129,9 +1137,15 @@ footer .container {
   margin-right: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-email {
+    margin-top: 60px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-email {
     margin-left: 93px;
+    margin-top: 0;
   }
 }
 

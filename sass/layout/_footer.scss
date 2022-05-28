@@ -57,6 +57,10 @@ footer .container {
     }
 }
 .footer-social {
+    margin-top: 60px;
+    @media screen and (min-width:768px) {
+        margin-top: 0;
+         }
     @media screen and (min-width:1200px) {
         margin-left: 70px;
          }
@@ -89,9 +93,13 @@ footer .container {
 .footer-soc-item:not(:last-child) {
     margin-right: 10px;
 }
-.footer-email {    
+.footer-email {  
+    @media screen and (min-width:768px) {
+        margin-top: 60px;
+         }  
     @media screen and (min-width:1200px) {
        margin-left: 93px;
+       margin-top: 0;
         }
 }
 .footer-email-title {
